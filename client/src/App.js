@@ -7,7 +7,7 @@ const socket = io.connect("http://localhost:3001");
 const App = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
-  const [change, setChange] = useState(true);
+  const [change, setChange] = useState(false);
   const joinRoom = () => {
     if (name !== "" && room !== "") {
       socket.emit("join_room", room);
